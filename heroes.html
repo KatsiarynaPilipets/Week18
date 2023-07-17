@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .hero-container {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .hero-card {
+            width: 300px;
+            margin: 10px;
+            padding: 10px;
+            border: 1px solid grey;
+            border-radius: 5px;
+            box-shadow: 0 0 5px grey;
+        }
+        .hero-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+        .hero-name {
+            font-size: 20px;
+            margin-top: 10px;
+        }
+        .hero-rating {
+            font-size: 16px;
+            color: grey;
+            margin-top: 5px;
+        }
+        .hero-description {
+            margin-top: 10px;
+        }
+        .rating-container {
+            display: flex;
+            align-items: center;
+            margin-top: 10px;
+        }
+        .rating {
+            margin-left: 5px;
+        }
+        .submit-button {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="hero-container"></div>
+
+    <template id="hero-template">
+        <div class="hero-card">
+            <img class="hero-image">
+            <h2 class="hero-name"></h2>
+            <p class="hero-rating"></p>
+            <p class="hero-description"></p>
+            <div class="rating-container">
+                <span>Rating:</span>
+                <input class="rating" type="number" min="0" max="10" step="1">
+                <button class="submit-button">Submit</button>
+            </div>
+        </div>
+    </template>
+    <script src="heroes.js"></script>
+</body>
+</html>
